@@ -1,14 +1,37 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./styles/App.css";
 import React from "react";
-import LoginForm from "./components/LoginForm";
 import MainLayout from "./components/MainLayout";
+import LoginPage from "./pages/LoginPage";
+import DashboardPage from "./pages/DashboardPage";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import Routes from "./constants/routes";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <div>
-      <MainLayout />
-    </div>
+    <Router>
+      {/*<Link to={Routes.HOME}>HOme</Link>*/}
+      <MainLayout>
+        <div>
+          <ul>
+            <li>
+              <Link to={Routes.DASHBOARD}>Dashboard</Link>
+            </li>
+          </ul>
+
+          <Switch>
+            <Route path={Routes.DASHBOARD}>
+              <DashboardPage />
+            </Route>
+          </Switch>
+        </div>
+      </MainLayout>
+      {/*<Switch>*/}
+      {/*  <Route path={Routes.HOME}>*/}
+      {/*    <HomePage />*/}
+      {/*  </Route>*/}
+      {/*</Switch>*/}
+    </Router>
   );
 }
 
