@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const PermisosPage = () => {
   return (
     <MainLayout>
-      <div>dashboard</div>
+      <div>PERMISOS PAGE</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default PermisosPage;
