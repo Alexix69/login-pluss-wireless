@@ -1,29 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "antd";
 import { AppstoreOutlined, SettingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Routes from "../constants/routes";
-
+import styled from "styled-components";
 const { SubMenu } = Menu;
 const MenuBar = () => {
+  const [selectKey, setSelectKey] = useState("");
+  const [selectItemKey, setSelectItemKey] = useState("");
+
   const handleClick = (e) => {
-    console.log("click ", e);
+    console.log("click key", e.key);
+    setSelectKey(e.key);
   };
+
+  // useEffect(() => {
+  //   console.log("IMPRIMIR CADA CAMNIO", selectKey);
+  // }, [selectKey]);
+
   return (
     <Menu
       onClick={handleClick}
-      style={{ width: 300 }}
-      defaultSelectedKeys={["1"]}
-      // defaultOpenKeys={["sub1"]}
+      style={{ width: 300, backgroundColor: "#bbbbbb" }}
+      // defaultSelectedKeys={["1"]}
+      // defaultOpenKeys={["sub1", "sub2", "sub3", "sub4"]}
       mode="inline"
+      // selectedKeys={[selectKey]}
     >
-      <Menu.Item key="1">
+      <MenuItemStyled key="1">
         <Link to={Routes.DASHBOARD}>Dashboard</Link>
-      </Menu.Item>
+      </MenuItemStyled>
       <SubMenu key="sub1" icon={<AppstoreOutlined />} title="Seguridad">
-        <Menu.Item key="2">
+        <MenuItemStyled key="2">
           <Link to={Routes.PERMISOS}>Permisos</Link>
-        </Menu.Item>
+        </MenuItemStyled>
         <Menu.Item key="3">
           <Link to={Routes.ROLES}>Roles</Link>
         </Menu.Item>
@@ -32,16 +42,32 @@ const MenuBar = () => {
         </Menu.Item>
       </SubMenu>
       <SubMenu key="sub2" icon={<SettingOutlined />} title="Base">
-        <Menu.Item key="5">Cargar base</Menu.Item>
-        <Menu.Item key="6">Retirar base</Menu.Item>
-        <Menu.Item key="7">Asignar base</Menu.Item>
-        <Menu.Item key="8">Habilitar / Inhabilitar</Menu.Item>
+        <Menu.Item key="5">
+          <Link to={Routes.CARGA_BD}>Cargar Base</Link>
+        </Menu.Item>
+        <Menu.Item key="6">
+          <Link to={Routes.RETIRAR_BD}>Retirar Base</Link>
+        </Menu.Item>
+        <Menu.Item key="7">
+          <Link to={Routes.ASIGNAR_BD}>Asignar Base</Link>
+        </Menu.Item>
+        <Menu.Item key="8">
+          <Link to={Routes.HABILITAR_INHABILITAR}>Habilitar / Inhabilitar</Link>
+        </Menu.Item>
       </SubMenu>
       <SubMenu key="sub3" icon={<SettingOutlined />} title="Reportes">
-        <Menu.Item key="9">Bitácora Clientes</Menu.Item>
-        <Menu.Item key="10">Bitácora Crédito</Menu.Item>
-        <Menu.Item key="11">Bitácora PDP</Menu.Item>
-        <Menu.Item key="12">Trama Gestión Completa</Menu.Item>
+        <Menu.Item key="9">
+          <Link to={Routes.BITACORA_CLIENTES}>Bitácora Clientes</Link>
+        </Menu.Item>
+        <Menu.Item key="10">
+          <Link to={Routes.BITACORA_CREDITO}>Bitácora Crédito</Link>
+        </Menu.Item>
+        <Menu.Item key="11">
+          <Link to={Routes.BITACORA_PDP}>Bitácora PDP</Link>
+        </Menu.Item>
+        <Menu.Item key="12">
+          <Link to={Routes.TRAMA_GESTION}>Trama Gestión Completa</Link>
+        </Menu.Item>
         <Menu.Item key="13">Indicadores</Menu.Item>
         <Menu.Item key="14">Tiempos Break</Menu.Item>
         <Menu.Item key="15">Base Gestionada</Menu.Item>
@@ -57,3 +83,8 @@ const MenuBar = () => {
 };
 
 export default MenuBar;
+
+const MenuItemStyled = styled(Menu.Item)`
+  background-color: #bbbbbb;
+  color: crimson;
+`;

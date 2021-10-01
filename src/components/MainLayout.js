@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Layout>
-        <Header>
+        <Header style={{ backgroundColor: "#F7F7F7" }}>
           {
             <img
               src={crmlogo}
