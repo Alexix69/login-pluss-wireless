@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const AssignDbPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>ASIGNAR BD</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default AssignDbPage;

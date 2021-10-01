@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const CreditBinnaclePage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>BITACORA DE CREDITO</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default CreditBinnaclePage;

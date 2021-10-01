@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const UploadDbPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>CARGAR BASE DE DATOS</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default UploadDbPage;

@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const ManagePage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>GESTIONAR</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default ManagePage;

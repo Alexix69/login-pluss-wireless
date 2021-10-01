@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const CompleteManagementPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>TRAMA GESTION COMPLETA</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default CompleteManagementPage;

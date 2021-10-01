@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const EnableDisablePage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>HABILITAR / DESHABILITAR</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default EnableDisablePage;

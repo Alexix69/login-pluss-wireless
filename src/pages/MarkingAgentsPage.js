@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const MarkingAgentsPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>MARCACION AGENTESSE</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default MarkingAgentsPage;

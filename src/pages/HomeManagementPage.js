@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const HomeManagementPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>INICICIO GESTION</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default HomeManagementPage;

@@ -1,12 +1,12 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 
-const DashboardPage = () => {
+const RemoveDbPage = () => {
   return (
     <MainLayout>
-      <div>DASHBOARD</div>
+      <div>Retirar base</div>
     </MainLayout>
   );
 };
 
-export default DashboardPage;
+export default RemoveDbPage;

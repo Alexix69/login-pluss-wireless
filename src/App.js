@@ -1,14 +1,13 @@
 import "./styles/App.css";
 import React from "react";
-import MainLayout from "./components/MainLayout";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Routes from "./constants/routes";
 import HomePage from "./pages/HomePage";
-import { BorderOuterOutlined } from "@ant-design/icons";
 import RolesPage from "./pages/RolesPage";
 import PermisosPage from "./pages/PermisosPage";
+import UsersPage from "./pages/UsersPage";
 
 function App() {
   return (
@@ -28,6 +27,9 @@ function App() {
         </Route>
         <Route exact path={Routes.PERMISOS}>
           <PermisosPage />
+        </Route>
+        <Route exact path={Routes.USUARIOS}>
+          <UsersPage />
         </Route>
       </Switch>
     </Router>
