@@ -1,7 +1,10 @@
 import React from "react";
-import { Layout } from "antd";
+import { Button, Col, Layout, Row } from "antd";
 import MenuBar from "./MenuBar";
 import crmlogo from "../crmlogo.jpeg";
+import { Link } from "react-router-dom";
+import Routes from "../constants/routes";
+import styled from "styled-components";
 const { Header, Content, Sider, Footer } = Layout;
 
 const MainLayout = ({ children }) => {
@@ -10,11 +13,24 @@ const MainLayout = ({ children }) => {
       <Layout>
         <Header style={{ backgroundColor: "#F7F7F7" }}>
           {
-            <img
-              src={crmlogo}
-              alt="Well Done Kids"
-              style={{ width: "375px", height: "55px" }}
-            />
+            <>
+              <Row>
+                <Col span={8}>
+                  <img
+                    src={crmlogo}
+                    alt="Well Done Kids"
+                    style={{ width: "375px", height: "55px" }}
+                  />
+                </Col>
+                <Col span={8} offset={8}>
+                  <StyledButton>
+                    <Link exact to={Routes.LOGIN}>
+                      Cerrar sesión
+                    </Link>
+                  </StyledButton>
+                </Col>
+              </Row>
+            </>
           }
         </Header>
       </Layout>
@@ -41,3 +57,12 @@ const MainLayout = ({ children }) => {
 };
 
 export default MainLayout;
+const StyledButton = styled(Button)`
+  background: #fe6c16;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  width: 150px;
+  margin: auto;
+`;

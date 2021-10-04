@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Menu } from "antd";
 import { AppstoreOutlined, SettingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+// import Link from "next/link";
 import Routes from "../constants/routes";
 import styled from "styled-components";
 const { SubMenu } = Menu;
@@ -68,16 +69,31 @@ const MenuBar = () => {
         <Menu.Item key="12">
           <Link to={Routes.TRAMA_GESTION}>Trama Gestión Completa</Link>
         </Menu.Item>
-        <Menu.Item key="13">Indicadores</Menu.Item>
-        <Menu.Item key="14">Tiempos Break</Menu.Item>
-        <Menu.Item key="15">Base Gestionada</Menu.Item>
-        <Menu.Item key="16">Marcación Agentes</Menu.Item>
+        <Menu.Item key="13">
+          <Link to={Routes.INDICADORES}>Indicadores</Link>
+        </Menu.Item>
+        <Menu.Item key="14">
+          <Link to={Routes.BREAK_TIMES}>Tiempos Break</Link>
+        </Menu.Item>
+        <Menu.Item key="15">
+          <Link to={Routes.BD_GESTIONADA}>Base Gestionada</Link>
+        </Menu.Item>
+        <Menu.Item key="16">
+          {" "}
+          <Link to={Routes.MARKING_AGENTS}>Marcación Agentes</Link>
+        </Menu.Item>
       </SubMenu>
       <SubMenu key="sub4" icon={<SettingOutlined />} title="Configuración">
-        <Menu.Item key="17">Inicio Gestión</Menu.Item>
-        <Menu.Item key="18">Deshabilitar Bases</Menu.Item>
+        <Menu.Item key="17">
+          <Link to={Routes.INICIO_GESTION}>Inicio Gestión</Link>
+        </Menu.Item>
+        <Menu.Item key="18">
+          <Link to={Routes.DESHABILITAR_BD}>Deshabilitar Bases</Link>
+        </Menu.Item>
       </SubMenu>
-      <Menu.Item key="19">Gestionar</Menu.Item>
+      <Menu.Item key="19">
+        <Link to={Routes.GESTIONAR}>Gestionar</Link>
+      </Menu.Item>
     </Menu>
   );
 };
