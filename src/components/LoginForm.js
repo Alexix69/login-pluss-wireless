@@ -100,7 +100,6 @@ const LoginForm = () => {
         )}
       />
       <div style={{ justifyContent: "center" }}>
-        {" "}
         <StyledButton type="submit">
           <Link exact to={Routes.DASHBOARD}>
             Ingresar
