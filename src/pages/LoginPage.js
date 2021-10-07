@@ -47,10 +47,10 @@ const LoginPage = () => {
         align="middle"
         style={{ backgroundColor: "#53504E", minHeight: "100vh" }}
       >
-        <Col>
+        <Col >
           <Space direction="vertical" size="large">
             <Row justify="center">
-              <Col>
+              <Col >
                 <StyledTitle level={2} style={{ color: "#fe6c16" }}>
                   CONVERSIONES
                 </StyledTitle>
@@ -65,8 +65,8 @@ const LoginPage = () => {
                 />
               </Col>
             </Row>
-            <Row justify="center">
-              <Col span={12}>
+            <Row >
+              <Col  span={8}>
                 <LoginForm />
               </Col>
             </Row>

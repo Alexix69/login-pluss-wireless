@@ -1,13 +1,25 @@
 import React from "react";
-import { Button, Col, Layout, Row } from "antd";
+import { Button, Col, Layout, Menu, Row, Dropdown } from "antd";
+import { DownOutlined, PoweroffOutlined } from "@ant-design/icons";
 import MenuBar from "./MenuBar";
 import crmlogo from "../crmlogo.jpeg";
+import avatar from "../avatar.png";
 import { Link } from "react-router-dom";
 import Routes from "../constants/routes";
 import styled from "styled-components";
+import Title from "antd/es/typography/Title";
 const { Header, Content, Sider, Footer } = Layout;
 
 const MainLayout = ({ children }) => {
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        <Link exact to={Routes.LOGIN}>
+          <PoweroffOutlined /> Salir
+        </Link>
+      </Menu.Item>
+    </Menu>
+  );
   return (
     <>
       <Layout>
@@ -18,16 +30,30 @@ const MainLayout = ({ children }) => {
                 <Col span={8}>
                   <img
                     src={crmlogo}
-                    alt="Well Done Kids"
+                    alt="crm"
                     style={{ width: "375px", height: "55px" }}
                   />
                 </Col>
                 <Col span={8} offset={8}>
-                  <StyledButton>
-                    <Link exact to={Routes.LOGIN}>
-                      Cerrar sesión
-                    </Link>
-                  </StyledButton>
+                  <Row>
+                    <Col span={2} offset={14}>
+                      <img
+                        src={avatar}
+                        alt="crm"
+                        style={{ width: "29px", height: "29px" }}
+                      />
+                    </Col>
+                    <Col span={8}>
+                      <Dropdown overlay={menu} trigger={["click"]}>
+                        <a
+                          className="ant-dropdown-link"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Administrador <DownOutlined />
+                        </a>
+                      </Dropdown>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import {Form, Input, Button, Checkbox, Row, Col} from "antd";
 import Select from "react-select";
 import { useForm, Controller } from "react-hook-form";
 import styled from "styled-components";
@@ -85,27 +85,46 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Controller
-        name="users"
-        control={control}
-        defaultValue=""
-        render={({ field }) => <StyledInput {...field} placeholder="Usuario" />}
-      />
-      <Controller
-        name="password"
-        control={control}
-        defaultValue=""
-        render={({ field }) => (
-          <StyledInput {...field} placeholder="Contraseña" />
-        )}
-      />
-      <div style={{ justifyContent: "center" }}>
-        <StyledButton type="submit">
-          <Link exact to={Routes.DASHBOARD}>
-            Ingresar
-          </Link>
-        </StyledButton>
-      </div>
+        <Row justify="center">
+            <Col span={12}>
+                <Row >
+                    <Col >
+                        <Controller
+                            name="users"
+                            control={control}
+                            defaultValue=""
+                            render={({ field }) => <StyledInput {...field} placeholder="Usuario" />}
+                        />
+                    </Col>
+                </Row>
+                <Row justify="center">
+                    <Col>
+                        <Controller
+                            name="password"
+                            control={control}
+                            defaultValue=""
+                            render={({ field }) => (
+                                <StyledInput {...field} placeholder="Contraseña" />
+                            )}
+                        />
+                    </Col>
+                </Row>
+                <Row >
+                    <Col  >
+                        <StyledButton type="submit">
+                            <Link exact to={Routes.DASHBOARD}>
+                                Ingresar
+                            </Link>
+                        </StyledButton>
+                    </Col>
+                </Row>
+            </Col>
+        </Row>
+
+
+      {/*<div style={{ justifyContent: "center" }}>*/}
+      {/*  */}
+      {/*</div>*/}
     </form>
   );
 };

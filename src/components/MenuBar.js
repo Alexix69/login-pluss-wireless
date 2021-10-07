@@ -35,17 +35,17 @@ const MenuBar = () => {
         <MenuItemStyled key="2">
           <Link to={Routes.PERMISOS}>Permisos</Link>
         </MenuItemStyled>
-        <Menu.Item key="3">
+        <MenuItemStyled key="3">
           <Link to={Routes.ROLES}>Roles</Link>
-        </Menu.Item>
-        <Menu.Item key="4">
+        </MenuItemStyled>
+        <MenuItemStyled key="4">
           <Link to={Routes.USUARIOS}>Usuarios</Link>
-        </Menu.Item>
+        </MenuItemStyled>
       </SubMenu>
       <SubMenu key="sub2" icon={<SettingOutlined />} title="Base">
-        <Menu.Item key="5">
+        <MenuItemStyled key="5">
           <Link to={Routes.CARGA_BD}>Cargar Base</Link>
-        </Menu.Item>
+        </MenuItemStyled>
         <Menu.Item key="6">
           <Link to={Routes.RETIRAR_BD}>Retirar Base</Link>
         </Menu.Item>
