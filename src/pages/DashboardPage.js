@@ -1,11 +1,16 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
+import MainLayoutTest from "../components/MainLayoutTest";
 
 const DashboardPage = () => {
   return (
-    <MainLayout>
+    // <MainLayout>
+    // <div>DASHBOARD</div>
+    // </MainLayout>
+
+    <MainLayoutTest>
       <div>DASHBOARD</div>
-    </MainLayout>
+    </MainLayoutTest>
   );
 };
 

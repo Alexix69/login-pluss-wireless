@@ -19,6 +19,6 @@ const Routes = {
   MARKING_AGENTS: "/marcacion-agentes",
   INICIO_GESTION: "/inicio-gestion",
   DESHABILITAR_BD: "/deshabilitarBase",
-  GESTIONAR: "/gestionar",
+  GESTIONAR: "/gestion",
 };
 export default Routes;
