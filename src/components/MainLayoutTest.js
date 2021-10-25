@@ -117,6 +117,7 @@ const MainLayoutTest = ({ children }) => {
               <Menu.Item key="11">option11</Menu.Item>
               <Menu.Item key="12">option12</Menu.Item>
             </SubMenu>
+            <Menu.Item>Gestionar</Menu.Item>
           </Menu>
         </Sider>
 
